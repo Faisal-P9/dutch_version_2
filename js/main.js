@@ -195,6 +195,7 @@ function serviceCode() {
       video1.addEventListener('ended', function myHandler1() {
           video2.play();
           video1.style.display = 'none';
+          video3.style.display = 'none';
           video2.style.display = 'block';
 
           apto.style.background = "linear-gradient(41deg, #ffffff, #ffffff)";
@@ -208,6 +209,7 @@ function serviceCode() {
            video2.addEventListener('ended', function myHandler2() {
             video3.play();
 
+            video1.style.display = 'none';
             video2.style.display = 'none';
             video3.style.display = 'block';
 
@@ -222,6 +224,7 @@ function serviceCode() {
               video3.addEventListener('ended', function myHandler3() {
                 video1.play();
 
+                video2.style.display = 'none';
                 video3.style.display = 'none';
                 video1.style.display = 'block';
 
@@ -241,6 +244,7 @@ function serviceCode() {
       video1.addEventListener('ended', function myHandler1() {
         video2.play();
         video1.style.display = 'none';
+        video3.style.display = 'none';
         video2.style.display = 'block';
 
         apto.style.background = "linear-gradient(41deg, #ffffff, #ffffff)";
@@ -254,6 +258,7 @@ function serviceCode() {
          video2.addEventListener('ended', function myHandler2() {
           video3.play();
 
+          video1.style.display = 'none';
           video2.style.display = 'none';
           video3.style.display = 'block';
 
@@ -268,6 +273,7 @@ function serviceCode() {
             video3.addEventListener('ended', function myHandler3() {
               video1.play();
 
+              video2.style.display = 'none';
               video3.style.display = 'none';
               video1.style.display = 'block';
 
@@ -1047,10 +1053,18 @@ function scrollBallCode() {
   });
 
   ScrollTrigger.create({
+    trigger: ".subscribe",
+    start: "top 30%",
+    end: "bottom 32%",
+    id: 'two',
+    toggleClass: { targets: ".subscribeCircle", className: "active" }
+  });
+
+  ScrollTrigger.create({
     trigger: ".displayAd",
     start: "top 30%",
     end: "bottom 32%",
-    id: 'hree',
+    id: 'three',
     toggleClass: { targets: ".displayCircle", className: "active" }
   });
 
@@ -1058,7 +1072,7 @@ function scrollBallCode() {
     trigger: ".weboramaAd",
     start: "top 30%",
     end: "bottom 32%",
-    id: 'two',
+    id: 'four',
     toggleClass: { targets: ".richCircle", className: "active" }
   });
 
@@ -1074,7 +1088,7 @@ function scrollBallCode() {
     trigger: ".dynamicAd",
     start: "top 30%",
     end: "bottom 32%",
-    id: 'four',
+    id: 'six',
     toggleClass: { targets: ".dynamicCircle", className: "active" }
   });
 
@@ -1090,7 +1104,7 @@ function scrollBallCode() {
     trigger: ".shadowAd",
     start: "top 30%",
     end: "bottom 22%",
-    id: 'six',
+    id: 'eight',
     toggleClass: { targets: ".productionCircle", className: "active" }
   });
 
@@ -1098,7 +1112,7 @@ function scrollBallCode() {
     trigger: ".about",
     start: "top 30%",
     end: "bottom 32%",
-    id: 'eight',
+    id: 'nine',
     toggleClass: { targets: ".aboutCircle", className: "active" }
   });
 
@@ -1291,7 +1305,6 @@ tHeader4
     var circleWrap = document.querySelector('.circleWrap');
     
     
-
 
     let value = window.scrollY;
     let value2 = window.scrollY;
